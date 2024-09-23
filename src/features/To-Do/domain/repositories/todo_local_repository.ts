@@ -1,5 +1,7 @@
-export abstract class FormRepository {
-    abstract getTodo(): Promise<Form>;
+import {Todo} from "../models/todo.ts";
 
-    abstract postTodo(form: Form): Promise<void>;
+export abstract class Todo_local_repository {
+    abstract getTodos(): Promise<Todo>;
+
+    abstract saveTodo(form: Todo): Promise<void>;
 }
